@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <CardsComponent/>
+  <PieChartComponent />
+  <BarChartComponent />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PieChartComponent from './components/PieChartComponent.vue';
+import BarChartComponent from './components/BarChartComponent.vue';
+import CardsComponent from './components/CardsComponent.vue';
+
+
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    PieChartComponent,
+    BarChartComponent,
+    CardsComponent,
+  },
+  data() {
+    return {
+      email: "",
+      password: "",
+      technology: [],
+    };
+  },
+  methods: {
+    login() {
+      alert(this.email + " email : password " + this.password);
+    },
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
