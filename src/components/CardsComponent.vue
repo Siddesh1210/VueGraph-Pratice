@@ -3,10 +3,10 @@
     <div class="cookieCard red">
       <p class="cookieHeading">Cookies.</p>
       <p class="cookieDescription">
-        By using this website you automatically accept that we use cookies.
+        By using this website you automatically
         <a href="#">What for?</a>
       </p>
-      <button class="acceptButton">Understood</button>
+      <h3>25000</h3>
     </div>
 
     <div class="cookieCard blue">
@@ -15,7 +15,7 @@
         We value your privacy and data security.
         <a href="#">Learn more</a>
       </p>
-      <button class="acceptButton">Got it</button>
+      <h3>25000</h3>
     </div>
 
     <div class="cookieCard green">
@@ -24,7 +24,7 @@
         We may send you notifications about updates.
         <a href="#">Read more</a>
       </p>
-      <button class="acceptButton">Okay</button>
+      <h3>42000</h3>
     </div>
 
     <div class="cookieCard yellow">
@@ -33,7 +33,7 @@
         Keep updated with our latest features.
         <a href="#">Find out more</a>
       </p>
-      <button class="acceptButton">Acknowledge</button>
+      <h3>7000</h3>
     </div>
   </div>
 </template>
@@ -47,10 +47,12 @@ export default{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .cookieCard {
-    width: 100%;
+    width: 250px;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -62,7 +64,7 @@ export default{
     overflow: hidden; /* This hides the overflow */
     border-radius: 15px; /* Optional: Add rounded corners */
     color: rgb(241, 241, 241);
-    margin:0 20px;
+    margin:10px;
   }
   
   .cookieCard::before {
@@ -77,66 +79,51 @@ export default{
   }
   
   .red {
-    background: linear-gradient(to right, rgb(137, 104, 255), rgb(175, 152, 255));
+    background: linear-gradient(to right, #ec4887, #b754a4);
   }
   
   .red::before {
-    background: linear-gradient(to right, rgb(142, 110, 255), rgb(208, 195, 255));
+    background: linear-gradient(to right, #f17ba8, #960779);
   }
   
   .blue {
-    background: linear-gradient(to right, rgb(80, 160, 255), rgb(155, 210, 255));
+    background: linear-gradient(to right, #865fc0, #5447b9);
   }
   
   .blue::before {
-    background: linear-gradient(to right, rgb(90, 140, 255), rgb(185, 225, 255));
+    background: linear-gradient(to right, #925ee0, #4336ab);
   }
   
   .green {
-    background: linear-gradient(to right, rgb(80, 255, 159), rgb(152, 255, 195));
+    background: linear-gradient(to right, #44c4f1, #59a6e4);
   }
   
   .green::before {
-    background: linear-gradient(to right, rgb(90, 255, 140), rgb(195, 255, 208));
+    background: linear-gradient(to right, #19a7db, #053f6f);
   }
   
   .yellow {
-    background: linear-gradient(to right, rgb(255, 230, 85), rgb(255, 240, 150));
+    background: linear-gradient(to right, #ffb82c, #f57f59);
   }
   
   .yellow::before {
-    background: linear-gradient(to right, rgb(255, 220, 80), rgb(255, 240, 180));
+    background: linear-gradient(to right, #ffb82c, #f57f59);
   }
   
   .cookieHeading {
     font-size: 1.5em;
+    line-height: 1px !important;
     font-weight: 600;
     z-index: 2;
   }
   
   .cookieDescription {
-    font-size: 0.9em;
+    font-size: 1em;
+    margin-bottom: 0px;
     z-index: 2;
   }
   
   .cookieDescription a {
     color: rgb(241, 241, 241);
-  }
-  
-  .acceptButton {
-    padding: 11px 20px;
-    background-color: #7b57ff;
-    transition-duration: 0.2s;
-    border: none;
-    color: rgb(241, 241, 241);
-    cursor: pointer;
-    font-weight: 600;
-    z-index: 2;
-    border-radius: 10px;
-  }
-  
-  .acceptButton:hover {
-    background-color: #714aff;
-    transition-duration: 0.2s;
   }
 </style>
